@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StoreApp.Views.ProductPage"
+             Title="Crear Producto"
+             Icon="password_icon"
+             >
+    <ContentPage.Content>
+        <Grid  >
+            <Grid>
+
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="10*" ></RowDefinition>
+                    <RowDefinition Height="80*" ></RowDefinition>
+                    <RowDefinition Height="10*" ></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+
+                <Frame IsClippedToBounds="True" 
+                       Grid.Row="1" Grid.Column="0"
+                    HasShadow="True"
+                    Padding="10"
+                    BackgroundColor="White" >
+                    <Frame.Margin>
+                        <OnPlatform x:TypeArguments="Thickness"
+                        Android="10"
+                        iOS="10"/>
+                    </Frame.Margin>
+
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                                <RowDefinition Height="30"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="35*" ></ColumnDefinition>
+                                <ColumnDefinition Width="65*" ></ColumnDefinition>
+
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="Código" Grid.Row="0" Grid.Column="0"></Label>
+                            <Entry  Grid.Row="0" Grid.Column="1"></Entry>
+
+                            <Label Text="Nombre"  Grid.Row="1" Grid.Column="0"></Label>
+                            <Entry  Grid.Row="1" Grid.Column="1"></Entry>
+
+                            <Label Text="Descripción"  Grid.Row="2" Grid.Column="0"></Label>
+                            <Entry  Grid.Row="2" Grid.Column="1"></Entry>
+
+                            <Label Text="Precio "  Grid.Row="3" Grid.Column="0"></Label>
+                            <Entry  Grid.Row="3" Grid.Column="1"></Entry>
+
+                            
+                        </Grid>
+                        <Button  Text="Seleccionar Imagen"></Button>
+
+                       
+                    </StackLayout>
+                </Frame>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
